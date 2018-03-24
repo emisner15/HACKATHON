@@ -35,6 +35,10 @@ public class Database extends SQLiteOpenHelper {
         db.execSQL(query);
     }
 
+    public void onCreate(SQLiteDatabase db){
+        String inserts = "INSERT INTO" + TABLE_NAME + "("
+    }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldversion, int newversion) {
         String drop = ("DROP TABLE IF EXISTS " + TABLE_NAME);
